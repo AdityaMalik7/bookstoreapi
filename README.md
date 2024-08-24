@@ -4,12 +4,12 @@ A brief description of what your API does.
 
 ## Table of Contents
 
-1. [API Endpoints]
+ [API Endpoints]
    - [GET /api/books]
    - [POST /api/books]
    - [PUT /api/books/:isbn]
    - [DELETE /api/books/:isbn]
-2 [Examples]
+
 
 ## Installation
 
