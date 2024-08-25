@@ -2,6 +2,17 @@
 
 Basically this is a basic restful api created using node and express js , it performs the CRUD operations , the instructions is provided below.
 
+## Installation
+
+To get started with the API, you'll need to clone the repository and install the necessary dependencies.
+also make sure you have node already installed , you check the version of node by this "node --version".
+- npm init -y
+- npm install express
+- you need to install these in the same folder where you gonna put this file.
+
+
+
+
 ## Table of Contents
 
  [API Endpoints]
@@ -11,12 +22,7 @@ Basically this is a basic restful api created using node and express js , it per
    - [DELETE /api/books/:isbn]
 
 
-## Installation
 
-To get started with the API, you'll need to clone the repository and install the necessary dependencies.
-also make sure you have node already installed , you check the version of node by this "node --version".
-
-npm install express
 
 ## GET
 - GET : in postman change the request to get for seeing all the data.
@@ -25,7 +31,7 @@ npm install express
   for example: /api/books/1
 
 ## POST
--POST: in postman change the request to post for creating the data
+- POST: in postman change the request to post for creating the data
 - POST : "/api/books"
   now to post the data  use postman , and there you can put the data in object format.
 - Sample body:
