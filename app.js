@@ -1,5 +1,6 @@
 import express from "express";
-
+import { body, validationResult } from "express-validator";
+import { bookValidator } from "./validators.js";
 const app = express();
 app.use(express.json());
 const books = [
@@ -11,6 +12,7 @@ const books = [
     price: 500,
   },
 ];
+
 app.get("/", (req, res) => {
   res.send("Welcome to book store Api");
 });
@@ -26,7 +28,12 @@ app.get("/api/books/:isbn", (req, res) => {
   res.send(booksIsbn);
 });
 
-app.post("/api/books", (req, res) => {
+app.post("/api/books", bookValidator, (req, res) => {
+  const errors = validationResult(req);
+
+  if (!errors.isEmpty()) {
+    return res.status(404).send("Empty");
+  }
   const book = {
     title: req.body.title,
     author: req.body.author,
@@ -39,6 +46,8 @@ app.post("/api/books", (req, res) => {
 });
 
 app.put("/api/books/:isbn", (req, res) => {
+  const errors = validationResult(req);
+
   const booksIsbn = books.find((b) => b.isbn === parseInt(req.params.isbn));
   if (!booksIsbn) {
     return res.status(404).send("The book with given ISBN was not found");

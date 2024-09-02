@@ -1,7 +1,8 @@
 {
   "name": "bookstore-api",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "app.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,10 +10,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "@hapi/joi": "^15.0.3",
     "express": "^4.19.2",
-    "joi": "^13.7.0"
+    "express-validator": "^7.2.0"
   }
 }
